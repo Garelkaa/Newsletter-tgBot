@@ -15,11 +15,11 @@ async def start(message: types.Message):
                 db.add_user(message.from_user.id)
             await bot.send_message(message.from_user.id, "Добро пожаловать!") 
 
-@dp.message_handler(commands=['рассылка'])
+@dp.message_handler(commands=['newsletter'])
 async def sendall(message: types.Message):
     if message.chat.type == 'private':
         if message.from_user.id == 626452615:
-            text = message.text[10:]
+            text = message.text[12:]
             users = db.get_users()
             for row in users:
                 try:
