@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, executor,types
 from db import Database
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token='5846206421:AAH5TG_JYsH6wAHDYsU3eGGH2M-4lhTH38I')
+bot = Bot(token='' #bot token) 
 dp = Dispatcher(bot)
 db = Database('database.db')
 
